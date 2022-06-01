@@ -14,14 +14,14 @@ export default defineNuxtConfig({
   // app
   app: {
     head: {
-      title: 'Nuxt 3 Awesome Starter',
-      titleTemplate: '%s - Nuxt 3 Awesome Starter',
+      title: '武器瓶の台詞から第何回か検索するやつ',
+      titleTemplate: '%s - 武器瓶の台詞から第何回か検索するやつ',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           hid: 'description',
           name: 'description',
-          content: 'Nuxt 3 Awesome Starter',
+          content: '武器瓶の台詞から第何回か検索するやつ',
         },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -48,7 +48,6 @@ export default defineNuxtConfig({
   // build modules
   buildModules: [
     'nuxt-windicss',
-    '@nuxtjs/eslint-module',
     'unplugin-icons/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/svg',

@@ -1,10 +1,10 @@
 {
-  "name": "nuxt3-awesome-starter",
+  "name": "bukibin-search-com",
   "version": "0.1.0",
-  "description": "a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Tailwindcss 3",
+  "description": "a website made by Nuxt.js to search episode of \"Bukiyo-binbo-dance\".",
   "repository": {
     "type": "git",
-    "url": "git://github.com/viandwi24/nuxt3-awesome-starter"
+    "url": "git://github.com/kintsuba/bukibin-search.com"
   },
   "author": "viandwi24",
   "license": "MIT",
@@ -15,8 +15,6 @@
     "preview": "nuxt preview",
     "start": "node .output/server/index.mjs",
     "postinstall": "husky install",
-    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -25,15 +23,9 @@
     "@headlessui/vue": "1.5.0",
     "@iconify/json": "^1.1.456",
     "@intlify/nuxt3": "^0.1.10",
-    "@nuxtjs/eslint-config-typescript": "^7.0.2",
-    "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/svg": "^0.3.0",
     "@pinia/nuxt": "^0.1.8",
     "@vueuse/nuxt": "8.4.2",
-    "eslint": "^8.3.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^3.0.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
     "nuxt": "npm:nuxt3@3.0.0-rc.3-27545866.cd37a21",
@@ -47,10 +39,5 @@
     "typescript": "^4.5.2",
     "unplugin-icons": "0.14.3",
     "unplugin-vue-components": "0.19.5"
-  },
-  "lint-staged": {
-    "**/*.{js,ts,vue,html,css,scss}": [
-      "yarn lintfix"
-    ]
   }
 }
