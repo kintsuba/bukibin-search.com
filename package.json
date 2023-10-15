@@ -13,6 +13,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/ui": "^2.9.0",
     "nuxt": "^3.7.4",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
     "vue-tweet": "^2.0.2"
