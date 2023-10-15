@@ -1,7 +1,7 @@
 <template>
   <div>
     <BukibinHeader />
-    <NuxtPage />
+    <NuxtPage class="font-body" />
   </div>
 </template>
 
