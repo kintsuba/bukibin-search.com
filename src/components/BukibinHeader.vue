@@ -31,10 +31,43 @@
         />
       </div>
     </UContainer>
+    <USlideover v-model="isOpenSlideover" :ui="{ width: 'max-w-xs' }">
+      <div class="h-full flex flex-col gap-2 items-center justify-center">
+        <p class="text-lg font-bold">Menu</p>
+        <ul class="flex flex-col">
+          <li v-for="link in links">
+            <UButton
+              color="primary"
+              variant="link"
+              size="xl"
+              :label="link.label"
+              :to="link.href"
+              :icon="link.icon"
+            />
+          </li>
+        </ul>
+        <UButton
+          @click="isOpenSlideover = !isOpenSlideover"
+          class="fixed md:hidden bottom-4 right-4 z-50"
+          size="xl"
+          icon="i-heroicons-x-mark-solid"
+          variant="ghost"
+        >
+        </UButton>
+      </div>
+    </USlideover>
+    <UButton
+      @click="isOpenSlideover = !isOpenSlideover"
+      class="fixed md:hidden bottom-4 right-4 z-50"
+      size="xl"
+      icon="i-heroicons-bars-3"
+    >
+    </UButton>
   </header>
 </template>
+
 <script setup lang="ts">
-import { _primary } from "#tailwind-config/theme/accentColor";
+const isOpenSlideover = ref(false);
 
 const links = [
   { label: "Home", href: "/", icon: "i-heroicons-home-solid" },
