@@ -8,14 +8,22 @@
             color="primary"
             variant="outline"
             size="xl"
-            placeholder="検索したいセリフを入力"
+            placeholder="検索したいセリフを入力（２文字以上）"
             icon="i-heroicons-magnifying-glass-20-solid"
           />
-          <div class="my-4 flex flex-col gap-4">
+          <TransitionGroup
+            enter-active-class="animate-in fade-in slide-in-from-right"
+            move-class="transition-all"
+            leave-active-class="absolute animate-out fade-out slide-out-to-right"
+            tag="div"
+            class="my-4 flex flex-col gap-4"
+          >
             <UCard
               v-for="quote in matchedQuotes"
+              v-if="query.length >= 2"
               class="cursor-pointer"
               @click="selectQuote(quote.id)"
+              :key="quote.id"
             >
               <div class="grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4">
                 <div
@@ -44,7 +52,7 @@
                 </div>
               </div>
             </UCard>
-          </div>
+          </TransitionGroup>
         </div>
       </div>
     </UContainer>
@@ -86,7 +94,7 @@ const matchedQuotes = computed<Quote[]>(() => {
 });
 
 const selectQuote = (id: number) => {
-  if (!quotes.value || query.value === "") return [];
+  if (query.value.length < 2 || !quotes.value) return;
 
   selectedQuote.value = quotes.value.find((q) => q.id === id);
   isOpenModal.value = true;
