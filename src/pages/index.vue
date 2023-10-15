@@ -17,10 +17,12 @@
               class="cursor-pointer"
               @click="selectQuote(quote.id)"
             >
-              <div class="grid grid-cols-4 gap-4">
-                <div class="col-span-3 grid grid-cols-10">
+              <div class="grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4">
+                <div
+                  class="col-span-2 md:col-span-3 grid grid-cols-10 items-center"
+                >
                   <UIcon
-                    class="col-span-1 text-2xl text-primary-500"
+                    class="col-span-1 text-xl md:text-2xl text-primary-500"
                     name="i-heroicons-chat-bubble-oval-left-ellipsis-solid"
                   />
                   <p
@@ -29,9 +31,9 @@
                     {{ quote.quote }}
                   </p>
                 </div>
-                <div class="col-span-1 grid grid-cols-4">
+                <div class="col-span-1 grid grid-cols-4 items-center">
                   <UIcon
-                    class="col-span-1 text-2xl text-primary-500"
+                    class="col-span-1 text-xl md:text-2xl text-primary-500"
                     name="i-heroicons-user-solid"
                   />
                   <p
