@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { Quote } from "~/utils/types";
+import { type Quote } from "~/utils/types";
 
 const { data: quotes } = await useFetch<Quote[]>(
   "https://script.google.com/macros/s/AKfycbxgLVZ_-8tk0FelmZkRFVV6JpKhTqgIS2hDd4Q63iF8KRNjnmGHIA0D2Lbc8SPMuBsA/exec",
